@@ -5,7 +5,10 @@ def check_password(password: str):
 
     for i, common_password in enumerate(common_passwords, start=1):
         if password == common_password:
-            print(f'{password}: ')
+            print(f'{password}: ❌(#{i})')
+            return
+        
+    print(f'{password}: ✅ (Unique), go ahead and use it, make my day!!')
 
 
 def main():
