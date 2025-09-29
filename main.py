@@ -3,6 +3,11 @@ def check_password(password: str):
         common_passwords: list[str] = file.read().splitlines()
         print(common_passwords)
 
+    for i, common_password in enumerate(common_passwords, start=1):
+        if password == common_password:
+            print(f'{password}: ')
+
+
 def main():
     check_password('abc123')
 
