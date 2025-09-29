@@ -1,7 +1,6 @@
 def check_password(password: str):
     with open('passwords.text', 'r') as file:
         common_passwords: list[str] = file.read().splitlines()
-        print(common_passwords)
 
     for i, common_password in enumerate(common_passwords, start=1):
         if password == common_password:
@@ -12,7 +11,8 @@ def check_password(password: str):
 
 
 def main():
-    check_password('abc123')
+    user_password: str = input('Enter a password: ')
+    check_password(user_password)
 
 if __name__ == '__main__':
     main()
